@@ -2,6 +2,7 @@ import signal
 import socket
 from pathlib import Path
 import argparse
+import threading
 
 
 def extract_filename_from_request(request: str) -> Path:
@@ -43,6 +44,24 @@ def signal_handler(signum, frame):
     running = False
 
 
+def handle_client(connection_socket):
+    request = connection_socket.recv(1024).decode('utf-8')
+    filepath = extract_filename_from_request(request)
+    print(f"Received filepath: {filepath.absolute()}")
+
+    if filepath.is_file():
+        header = 'HTTP/1.0 200 OK\r\n\r\n'
+        with filepath.open('rb') as f:
+            response = header.encode('utf-8') + f.read()
+        print("File found")
+    else:
+        response = f'HTTP/1.0 404 NOT FOUND\r\n\r\n file {filepath} not found'.encode('utf-8')
+        print(f"File {filepath} not found")
+
+    connection_socket.sendall(response)
+    connection_socket.close()
+
+
 def main(port: int, concurrent: bool):
     print(f"File server is started. Port: {port}; Working dir: {Path().cwd()}")
 
@@ -53,21 +72,11 @@ def main(port: int, concurrent: bool):
             connection_socket, client_address = server_socket.accept()
         except TimeoutError:
             continue
-        request = connection_socket.recv(1024).decode('utf-8')
-        filepath = extract_filename_from_request(request)
-        print(f"Received request:\n{request}\nParsed filepath: {filepath.absolute()}\n")
-
-        if filepath.is_file():
-            header = 'HTTP/1.0 200 OK\r\n\r\n'
-            with filepath.open('rb') as f:
-                response = header.encode('utf-8') + f.read()
-            print(f"File found")
+        if concurrent:
+            client_thread = threading.Thread(target=handle_client, args=(connection_socket,))
+            client_thread.start()
         else:
-            response = 'HTTP/1.0 404 NOT FOUND\r\n\r\n file not found'.encode('utf-8')
-            print(f"File not found")
-
-        connection_socket.sendall(response)
-        connection_socket.close()
+            handle_client(connection_socket)
 
 
 if __name__ == '__main__':
