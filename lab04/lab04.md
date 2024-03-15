@@ -33,7 +33,7 @@ _(*) Вы должны заменить стоящий здесь 8888 на но
 
 #### Демонстрация работы
 
-Выполнил: A1, A2, A3
+Выполнил: A1, A2, A3, В
 
 GET example: 
 ![](images/get_example.png)
@@ -42,6 +42,9 @@ POST example:
 ![](images/post_example.png)
 
 Логи в файле [proxy.log](proxy.log)
+
+Blacklist example:
+![](images/blacklist_example.png)
 
 
 ### Б. Прокси-сервер с кешированием (4 балла)

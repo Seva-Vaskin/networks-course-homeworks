@@ -17,10 +17,11 @@ def log(msg, level=logging.INFO):
 
 
 class ProxyClientHandler:
-    def __init__(self, client_connection, client_address, semaphore):
+    def __init__(self, client_connection, client_address, semaphore, blacklist):
         self.client_connection = client_connection
         self.client_address = client_address
         self.semaphore = semaphore
+        self.blacklist = blacklist
         log(f"Client connection with {self.client_address} started")
 
     @staticmethod
@@ -61,6 +62,11 @@ class ProxyClientHandler:
                 assert url[0] == '/'
                 url = url[1:]
 
+                if url in self.blacklist:
+                    self.client_connection.sendall(self.ok_response(f"{url} is in the blacklist"))
+                    log(f"{url} is in blacklist => refuse")
+                    return
+
                 referer = [i for i in client_request.split('\n') if 'Referer:' in i]
                 if referer:
                     server_name = copy.copy(referer[0])
@@ -83,6 +89,7 @@ class ProxyClientHandler:
                 else:
                     self.client_connection.sendall(self.bad_request_response())
                     log(f"Bad request 400 for {url}")
+                    return
 
                 if response.status_code == 404:
                     log(f"Not found {url}")
@@ -108,6 +115,8 @@ class ProxyServer:
         self.server_socket.listen(5)
         self.server_socket.settimeout(1)
         self.running = True
+        with (Path(__file__).parent / "blacklist.txt").open('r') as f:
+            self.blacklist = set(f.read().split('\n'))
 
     def run(self):
         log(f"Proxy server started on port {self.port}")
@@ -115,7 +124,7 @@ class ProxyServer:
         while self.running:
             try:
                 client_connection, client_address = self.server_socket.accept()
-                client_handler = ProxyClientHandler(client_connection, client_address, self.semaphore)
+                client_handler = ProxyClientHandler(client_connection, client_address, self.semaphore, self.blacklist)
                 client_thread = threading.Thread(target=client_handler.handle)
                 client_thread.start()
             except socket.timeout:

@@ -34,3 +34,51 @@ INFO:root:Client connection with ('127.0.0.1', 39820) started
 INFO:root:Got response from https://httpbun.org/post with code 200
 INFO:root:Proxy server shut down
 INFO:root:Client connection with ('127.0.0.1', 39820) closed
+INFO:root:Proxy server started on port 8881
+INFO:root:Proxy server started on port 8881
+INFO:root:Client connection with ('127.0.0.1', 49356) started
+INFO:root:Client connection with ('127.0.0.1', 49362) started
+INFO:root:Got answer with code 200 for https://google.com
+INFO:root:Got response from https://google.com with code 200
+INFO:root:Client connection with ('127.0.0.1', 49356) closed
+INFO:root:Client connection with ('127.0.0.1', 36422) started
+INFO:root:Client connection with ('127.0.0.1', 36430) started
+INFO:root:Client connection with ('127.0.0.1', 36444) started
+INFO:root:Client connection with ('127.0.0.1', 36448) started
+INFO:root:Got answer with code 200 for https://google.com/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png
+INFO:root:Not found https://google.com/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png
+INFO:root:Client connection with ('127.0.0.1', 49362) closed
+INFO:root:Got answer with code 200 for https://google.com/images/nav_logo229.png
+INFO:root:Not found https://google.com/images/nav_logo229.png
+INFO:root:Client connection with ('127.0.0.1', 36444) closed
+INFO:root:Got answer with code 200 for https://google.com/xjs/_/js/k=xjs.hp.en._XZFxYeCmyI.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAADGAQAAgAAgAAAAgAMAAAAAAAAAAAHAQXQEAANwBAAAXg/d=1/ed=1/rs=ACT90oGduGj0imcoy-gMZla6SnIk9azP-w/m=sb_he,d
+INFO:root:Got response from https://google.com/xjs/_/js/k=xjs.hp.en._XZFxYeCmyI.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAADGAQAAgAAgAAAAgAMAAAAAAAAAAAHAQXQEAANwBAAAXg/d=1/ed=1/rs=ACT90oGduGj0imcoy-gMZla6SnIk9azP-w/m=sb_he,d with code 200
+INFO:root:Got answer with code 200 for https://google.com/textinputassistant/tia.png
+INFO:root:Got response from https://google.com/textinputassistant/tia.png with code 200
+INFO:root:Client connection with ('127.0.0.1', 36422) closed
+INFO:root:Got answer with code 200 for https://google.com/client_204?&atyp=i&biw=1850&bih=966&ei=vBP0ZYerAea20PEPyPOyQA&opi=89978449
+INFO:root:Got response from https://google.com/client_204?&atyp=i&biw=1850&bih=966&ei=vBP0ZYerAea20PEPyPOyQA&opi=89978449 with code 204
+INFO:root:Client connection with ('127.0.0.1', 36430) closed
+INFO:root:Client connection with ('127.0.0.1', 36450) started
+INFO:root:Client connection with ('127.0.0.1', 36448) closed
+INFO:root:Client connection with ('127.0.0.1', 36458) started
+INFO:root:Client connection with ('127.0.0.1', 36466) started
+INFO:root:Got answer with code 200 for https://google.com/images/nav_logo229.png
+INFO:root:Not found https://google.com/images/nav_logo229.png
+INFO:root:Client connection with ('127.0.0.1', 36458) closed
+INFO:root:Got answer with code 200 for https://google.com/favicon.ico
+INFO:root:Got response from https://google.com/favicon.ico with code 200
+INFO:root:Got answer with code 200 for https://google.com/gen_204?atyp=i&ct=psnt&cad=&nt=reload&ei=vBP0ZYerAea20PEPyPOyQA&zx=1710494652770&opi=89978449
+INFO:root:Got response from https://google.com/gen_204?atyp=i&ct=psnt&cad=&nt=reload&ei=vBP0ZYerAea20PEPyPOyQA&zx=1710494652770&opi=89978449 with code 204
+INFO:root:Client connection with ('127.0.0.1', 36450) closed
+INFO:root:Proxy server shut down
+INFO:root:Client connection with ('127.0.0.1', 36466) closed
+INFO:root:Proxy server started on port 8882
+INFO:root:Client connection with ('127.0.0.1', 56748) started
+INFO:root:Client connection with ('127.0.0.1', 56750) started
+INFO:root:google.com is in blacklist => refuse
+INFO:root:Client connection with ('127.0.0.1', 56748) closed
+INFO:root:Got answer with code 200 for https://google.com/favicon.ico
+INFO:root:Got response from https://google.com/favicon.ico with code 200
+INFO:root:Proxy server shut down
+INFO:root:Client connection with ('127.0.0.1', 56750) closed
