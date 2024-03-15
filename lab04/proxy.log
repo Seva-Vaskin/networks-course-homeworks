@@ -1,0 +1,36 @@
+INFO:root:Proxy server started on port 8888
+INFO:root:Client connection with ('127.0.0.1', 41254) started
+INFO:root:Client connection with ('127.0.0.1', 41262) started
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 41254) closed
+INFO:root:Client connection with ('127.0.0.1', 55048) started
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 41262) closed
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 41740) started
+INFO:root:Client connection with ('127.0.0.1', 55048) closed
+INFO:root:Client connection with ('127.0.0.1', 41742) started
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 41740) closed
+INFO:root:Client connection with ('127.0.0.1', 41752) started
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 41742) closed
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Proxy server started on port 8889
+INFO:root:Client connection with ('127.0.0.1', 50878) started
+INFO:root:Client connection with ('127.0.0.1', 50888) started
+INFO:root:Got answer with code 200 for https://vaskin.info/kek
+INFO:root:Not found https://vaskin.info/kek
+INFO:root:Client connection with ('127.0.0.1', 50878) closed
+INFO:root:Proxy server shut down
+INFO:root:Proxy server started on port 8881
+INFO:root:Client connection with ('127.0.0.1', 39820) started
+INFO:root:Got response from https://httpbun.org/post with code 200
+INFO:root:Proxy server shut down
+INFO:root:Client connection with ('127.0.0.1', 39820) closed
