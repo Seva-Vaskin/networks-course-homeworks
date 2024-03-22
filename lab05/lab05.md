@@ -14,7 +14,21 @@
 Приложите скриншоты полученных сообщений (для обоих форматов).
 
 #### Демонстрация работы
-todo
+
+``` 
+/usr/bin/python3.10 /home/vsevolod/spbu/networks-course-homeworks/lab05/email_sender.py --type=plain --smtp_server=smtp.yandex.ru --smtp_port=25 --login=... --password=... --recipient=... --subject=test --message=Hello world! 
+Email successfully sent!
+```
+
+![](images/plain_mail.png)
+
+``` 
+/usr/bin/python3.10 /home/vsevolod/spbu/networks-course-homeworks/lab05/email_sender.py --type=html --smtp_server=smtp.yandex.ru --smtp_port=25 --login=... --password=... --recipient=... --subject=test HTMP --message=<h1 style='color:red'>red header</h1> 
+Email successfully sent!
+```
+
+![](images/html_mail.png)
+
 
 ### 2. SMTP-клиент (3 балла)
 Разработайте простой почтовый клиент, который отправляет текстовые сообщения
