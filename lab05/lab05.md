@@ -70,7 +70,38 @@ Paint (на стороне сервера). Или запустить консо
 сервере) отправляется обратно клиенту.
 
 #### Демонстрация работы
-todo
+
+**client:**
+```
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab05$ python command_client.py 
+Enter command to execute: ls
+command_client.py
+command_server.py
+email_sender.py
+images
+lab05.md
+
+Enter command to execute: echo "Hello"
+Hello
+
+Enter command to execute: 
+```
+
+**server:**
+```
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab05$ python command_server.py 
+Listening on localhost:8888
+Connected by ('127.0.0.1', 35798)
+Executing "ls"
+Listening on localhost:8888
+Connected by ('127.0.0.1', 41778)
+Executing "ls"
+Listening on localhost:8888
+Connected by ('127.0.0.1', 41792)
+Executing "echo "Hello""
+Listening on localhost:8888
+   
+```
 
 ### В. Широковещательная рассылка через UDP (2 балла)
 Реализуйте сервер (веб-службу) и клиента с использованием интерфейса Socket API, которая:
