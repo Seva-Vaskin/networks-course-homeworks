@@ -110,7 +110,27 @@ Listening on localhost:8888
 - клиент службы выводит на консоль сообщаемое ему время
 
 #### Демонстрация работы
-todo
+
+**client**:
+```
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab05$ python udp_time_client.py 
+Received time: 2024-03-22 10:27:57
+Received time: 2024-03-22 10:27:58
+Received time: 2024-03-22 10:27:59
+Received time: 2024-03-22 10:28:00
+```
+
+**server**:
+```
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab05$ python udp_time_server.py 
+Sent time: 2024-03-22 10:27:54
+Sent time: 2024-03-22 10:27:55
+Sent time: 2024-03-22 10:27:56
+Sent time: 2024-03-22 10:27:57
+Sent time: 2024-03-22 10:27:58
+Sent time: 2024-03-22 10:27:59
+Sent time: 2024-03-22 10:28:00
+```
 
 ## Задачи
 
