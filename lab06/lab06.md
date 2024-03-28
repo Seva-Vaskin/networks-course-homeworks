@@ -68,7 +68,36 @@
 Бонус: Не используйте готовые библиотеки для работы с FTP (например, ftplib для Python), а реализуйте решение на сокетах **(+3 балла)**.
 
 #### Демонстрация работы
-todo
+
+Код можно найти [тут](ftp_client_console.py)
+
+```
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action list                                                                  1 ✘ 
+Connected to 127.0.0.1
+drwx------    2 1001     1001         4096 Mar 28 19:24 test_dir
+-rw-------    1 1001     1001            0 Mar 28 19:25 test_file
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action upload --filename lab06.md                                              ✔ 
+Connected to 127.0.0.1
+File lab06.md is uploaded
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action list                                                                    ✔ 
+Connected to 127.0.0.1
+-rw-------    1 1001     1001         6695 Mar 28 19:42 lab06.md
+drwx------    2 1001     1001         4096 Mar 28 19:24 test_dir
+-rw-------    1 1001     1001            0 Mar 28 19:25 test_file
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action download --filename test_file                                         2 ✘ 
+Connected to 127.0.0.1
+File test_file is downloaded
+Connection closed
+
+> ls                                                                                                                                                        ✔ 
+ftp_client_console.py  images  lab06.md  test_file
+```
 
 ### GUI FTP клиент (4 балла)
 Реализуйте приложение FTP клиента с графическим интерфейсом. НЕ используйте C#.
