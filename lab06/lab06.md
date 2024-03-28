@@ -68,14 +68,34 @@
 Бонус: Не используйте готовые библиотеки для работы с FTP (например, ftplib для Python), а реализуйте решение на сокетах **(+3 балла)**.
 
 #### Демонстрация работы
-todo
+```
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action list                                                                  1 ✘ 
+Connected to 127.0.0.1
+drwx------    2 1001     1001         4096 Mar 28 19:24 test_dir
+-rw-------    1 1001     1001            0 Mar 28 19:25 test_file
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action upload --filename lab06.md                                              ✔ 
+Connected to 127.0.0.1
+File lab06.md is uploaded
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action list                                                                    ✔ 
+Connected to 127.0.0.1
+-rw-------    1 1001     1001         6695 Mar 28 19:42 lab06.md
+drwx------    2 1001     1001         4096 Mar 28 19:24 test_dir
+-rw-------    1 1001     1001            0 Mar 28 19:25 test_file
+Connection closed
+
+> python ftp_client_console.py --host 127.0.0.1 --user TestUser --passwd test --action download --filename test_file                                         2 ✘ 
+Connected to 127.0.0.1
+File test_file is downloaded
+Connection closed
+```
 
 ### GUI FTP клиент (4 балла)
 Реализуйте приложение FTP клиента с графическим интерфейсом. НЕ используйте C#.
 
-Возможный интерфейс:
-
-<img src="images/example-ftp-gui.png" width=300 />
 
 В приложении должна быть поддержана следующая функциональность:
 - Выбор сервера с указанием порта, логин и пароль пользователя и возможность
@@ -87,22 +107,12 @@ todo
 содержимое файла можно выводить в главном окне.
 
 #### Демонстрация работы
+
+Код можно найти [тут](ftp_client_gui.py)
+
 ![](images/gui_3.png)
 ![](images/gui_2.png)
 ![](images/gui_1.png)
 
-### FTP сервер (5 баллов)
-Реализуйте свой FTP сервер, который работает поверх TCP сокетов. Вы можете использовать FTP клиента, реализованного на прошлом этапе, для тестирования своего сервера.
-Сервер должен реализовать возможность авторизации (с указанием логина/пароля) и поддерживать команды:
-- CWD
-- PWD
-- PORT
-- NLST
-- RETR
-- STOR
-- QUIT
-
-#### Демонстрация работы
-todo
 
 
