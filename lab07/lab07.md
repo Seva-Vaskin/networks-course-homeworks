@@ -201,4 +201,10 @@ todo
 более $98$ процентов?
 
 #### Решение
-todo
+Воспользуемся формулой: 
+$\dfrac{n \cdot \frac{L}{R}}{RTT + \frac{L}{R}} \ge 0.98 \Leftrightarrow
+\dfrac{n \cdot \frac{1500 \cdot 8}{10^9}}{0.03 + \frac{1500 \cdot 8}{10^9}} \ge 0.98 \implies
+n \ge 2451$
+
+
+
