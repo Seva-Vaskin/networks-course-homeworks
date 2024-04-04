@@ -135,7 +135,30 @@ Time-Sequence-Graph (Stevens) (Статистика => График TCP пото
 
 #### Демонстрация работы
 
-todo
+<u>Вывод сервера:</u>
+
+```
+Server is listening on localhost:12345
+Packet lost
+```
+
+<u>Вывод клиента:</u>
+
+``` 
+Received: PING 1 2024-04-04 23:47:28.368552 RTT: 0.00085 seconds
+Received: PING 2 2024-04-04 23:47:28.369424 RTT: 0.00018 seconds
+Received: PING 3 2024-04-04 23:47:28.369618 RTT: 0.00018 seconds
+Received: PING 4 2024-04-04 23:47:28.369811 RTT: 0.00018 seconds
+Received: PING 5 2024-04-04 23:47:28.370010 RTT: 0.00015 seconds
+Request timed out
+Received: PING 7 2024-04-04 23:47:29.371117 RTT: 0.00078 seconds
+Received: PING 8 2024-04-04 23:47:29.371946 RTT: 0.00067 seconds
+Received: PING 9 2024-04-04 23:47:29.372663 RTT: 0.00064 seconds
+Received: PING 10 2024-04-04 23:47:29.373347 RTT: 0.00064 seconds
+```
+
+* Код сервера: [echo_udp_server.py](echo_udp_server.py)
+* Код клиента: [echo_udp_client.py](echo_upd_client.py)
 
 ### В. Вывод в формате ping (2 балла)
 
@@ -149,7 +172,56 @@ todo
 
 #### Демонстрация работы
 
-todo
+Изменил вывод клиента, теперь выводится больше информации: 
+
+```  
+Received: PING 1 2024-04-05 00:07:33.523136 RTT: 0.00077 seconds
+
+1 packets transmitted, 1 packets received, 0.000% packet loss
+rtt min/avg/max = 0.775/0.775/0.775 ms
+
+Request timed out
+
+Received: PING 3 2024-04-05 00:07:34.524330 RTT: 0.00077 seconds
+
+3 packets transmitted, 2 packets received, 33.333% packet loss
+rtt min/avg/max = 0.774/0.774/0.775 ms
+
+Received: PING 4 2024-04-05 00:07:34.525203 RTT: 0.00066 seconds
+
+4 packets transmitted, 3 packets received, 25.000% packet loss
+rtt min/avg/max = 0.660/0.736/0.775 ms
+
+Received: PING 5 2024-04-05 00:07:34.525957 RTT: 0.00064 seconds
+
+5 packets transmitted, 4 packets received, 20.000% packet loss
+rtt min/avg/max = 0.644/0.713/0.775 ms
+
+Received: PING 6 2024-04-05 00:07:34.526705 RTT: 0.00067 seconds
+
+6 packets transmitted, 5 packets received, 16.667% packet loss
+rtt min/avg/max = 0.644/0.704/0.775 ms
+
+Received: PING 7 2024-04-05 00:07:34.527465 RTT: 0.00068 seconds
+
+7 packets transmitted, 6 packets received, 14.286% packet loss
+rtt min/avg/max = 0.644/0.700/0.775 ms
+
+Received: PING 8 2024-04-05 00:07:34.528245 RTT: 0.00060 seconds
+
+8 packets transmitted, 7 packets received, 12.500% packet loss
+rtt min/avg/max = 0.601/0.686/0.775 ms
+
+Received: PING 9 2024-04-05 00:07:34.528926 RTT: 0.00052 seconds
+
+9 packets transmitted, 8 packets received, 11.111% packet loss
+rtt min/avg/max = 0.515/0.664/0.775 ms
+
+Received: PING 10 2024-04-05 00:07:34.529521 RTT: 0.00052 seconds
+
+10 packets transmitted, 9 packets received, 10.000% packet loss
+rtt min/avg/max = 0.515/0.649/0.775 ms
+```
 
 ### Г. UDP Heartbeat (4 балла)
 
