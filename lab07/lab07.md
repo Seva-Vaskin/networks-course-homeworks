@@ -244,7 +244,72 @@ UDP Heartbeat (монитор доступности) подобен прогр�
 
 #### Демонстрация работы
 
-todo
+* Код сервера: [heartbeat_server.py](heartbeat_server.py)
+* Код клиента: [heartbeat_client.py](heartbeat_client.py)
+
+Сервер: 
+
+``` 
+Server is listening on localhost:12345
+Ok from ('127.0.0.1', 41043), packet 1, delay 0.001 seconds
+Ok from ('127.0.0.1', 41043), packet 2, delay 0.001 seconds
+Ok from ('127.0.0.1', 41043), packet 3, delay 0.001 seconds
+Ok from ('127.0.0.1', 41043), packet 4, delay 0.001 seconds
+Ok from ('127.0.0.1', 41043), packet 5, delay 0.001 seconds
+Packet loss detected from ('127.0.0.1', 41043). Missing packets from 6 to 7, packet 8, delay 0.001 seconds
+Ok from ('127.0.0.1', 41043), packet 9, delay 0.001 seconds
+Packet loss detected from ('127.0.0.1', 41043). Missing packets from 10 to 10, packet 11, delay 0.001 seconds
+Client ('127.0.0.1', 41043) is assumed stopped. No heartbeat received for 10 seconds.
+
+```
+
+Клиент: 
+
+``` 
+Heartbeat 1 sent
+Heartbeat 2 sent
+Heartbeat 3 sent
+Heartbeat 4 sent
+Heartbeat 5 sent
+Emulated miss
+Emulated miss
+Heartbeat 8 sent
+Heartbeat 9 sent
+Emulated miss
+Heartbeat 11 sent
+Emulated miss
+```
+
+Сервер (получает запросы от 3-х клиентов):
+
+``` 
+Server is listening on localhost:12345
+Ok from ('127.0.0.1', 46515), packet 1, delay 0.001 seconds
+Ok from ('127.0.0.1', 46015), packet 1, delay 0.001 seconds
+Ok from ('127.0.0.1', 48281), packet 1, delay 0.001 seconds
+Ok from ('127.0.0.1', 46515), packet 2, delay 0.001 seconds
+Packet loss detected from ('127.0.0.1', 46015). Missing packets from 2 to 3, packet 4, delay 0.001 seconds
+Packet loss detected from ('127.0.0.1', 46515). Missing packets from 3 to 3, packet 4, delay 0.002 seconds
+Packet loss detected from ('127.0.0.1', 48281). Missing packets from 2 to 3, packet 4, delay 0.002 seconds
+Ok from ('127.0.0.1', 46015), packet 5, delay 0.001 seconds
+Ok from ('127.0.0.1', 48281), packet 5, delay 0.002 seconds
+Packet loss detected from ('127.0.0.1', 46515). Missing packets from 5 to 5, packet 6, delay 0.001 seconds
+Ok from ('127.0.0.1', 46015), packet 6, delay 0.001 seconds
+Ok from ('127.0.0.1', 48281), packet 6, delay 0.002 seconds
+Ok from ('127.0.0.1', 46515), packet 7, delay 0.001 seconds
+Ok from ('127.0.0.1', 48281), packet 7, delay 0.001 seconds
+Packet loss detected from ('127.0.0.1', 46015). Missing packets from 7 to 7, packet 8, delay 0.001 seconds
+Ok from ('127.0.0.1', 46515), packet 8, delay 0.002 seconds
+Ok from ('127.0.0.1', 46515), packet 9, delay 0.001 seconds
+Ok from ('127.0.0.1', 46015), packet 9, delay 0.002 seconds
+Packet loss detected from ('127.0.0.1', 48281). Missing packets from 8 to 8, packet 9, delay 0.002 seconds
+Ok from ('127.0.0.1', 46015), packet 10, delay 0.001 seconds
+Ok from ('127.0.0.1', 48281), packet 10, delay 0.002 seconds
+Ok from ('127.0.0.1', 46515), packet 10, delay 0.002 seconds
+Client ('127.0.0.1', 46515) is assumed stopped. No heartbeat received for 10 seconds.
+Client ('127.0.0.1', 46015) is assumed stopped. No heartbeat received for 10 seconds.
+Client ('127.0.0.1', 48281) is assumed stopped. No heartbeat received for 10 seconds.
+```
 
 ## Задачи
 
