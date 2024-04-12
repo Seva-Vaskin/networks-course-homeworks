@@ -1,0 +1,159 @@
+/usr/bin/python3.11 /home/vsevolod/spbu/networks-course-homeworks/lab08/reliable_udp/reliable_udp.py client client_files --filepath=example.txt --server_address=localhost
+client: start sending file
+Sending SOF
+Try to send package Packet.Header(identifier=0, tag=2, checksum=2072239142). Attempt 1: b'example.txt'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 1
+Sending data: b'`test text\n\ntest text\n\ndfkl vfk dkvnskdv nfdkjlnflkjfdblfd'
+Try to send package Packet.Header(identifier=1, tag=4, checksum=1232746631). Attempt 1: b'`test text\n\ntest text\n\ndfkl vfk dkvnskdv nfdkjlnflkjfdblfd'
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=1232746631). Attempt 2: b'`test text\n\ntest text\n\ndfkl vfk dkvnskdv nfdkjlnflkjfdblfd'
+Packet is lost
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=1232746631). Attempt 3: b'`test text\n\ntest text\n\ndfkl vfk dkvnskdv nfdkjlnflkjfdblfd'
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=1232746631). Attempt 4: b'`test text\n\ntest text\n\ndfkl vfk dkvnskdv nfdkjlnflkjfdblfd'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 0
+Sending data: b'jkbvjfdbvlkjfdbsvjbklfbvkljdsfnvlkjdfnvlkjfdsnvkljsdfnvlkj'
+Try to send package Packet.Header(identifier=0, tag=4, checksum=4261888814). Attempt 1: b'jkbvjfdbvlkjfdbsvjbklfbvkljdsfnvlkjdfnvlkjfdsnvkljsdfnvlkj'
+Packet is lost
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=0, tag=4, checksum=4261888814). Attempt 2: b'jkbvjfdbvlkjfdbsvjbklfbvkljdsfnvlkjdfnvlkjfdsnvkljsdfnvlkj'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 1
+Sending data: b'dfnvlkjfdvnlkdsjfnvkljdnvljkdsnvkljfvn\nsdvlkknfsdkvlj nsdf'
+Try to send package Packet.Header(identifier=1, tag=4, checksum=818536713). Attempt 1: b'dfnvlkjfdvnlkdsjfnvkljdnvljkdsnvkljfvn\nsdvlkknfsdkvlj nsdf'
+Packet is lost
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=818536713). Attempt 2: b'dfnvlkjfdvnlkdsjfnvkljdnvljkdsnvkljfvn\nsdvlkknfsdkvlj nsdf'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 0
+Sending data: b'kj vnjkdfsvdfkljkfdvblkdfjbvkljsfdnvlksjdfvnklsdjfvnkldsfv'
+Try to send package Packet.Header(identifier=0, tag=4, checksum=586908017). Attempt 1: b'kj vnjkdfsvdfkljkfdvblkdfjbvkljsfdnvlksjdfvnklsdjfvnkldsfv'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 1
+Sending data: b'ndflkjvnsdfkjvnfsdkjlvnklsdfjnvdjklsfvnfjkdsvnsj\ndfvkjdk f'
+Try to send package Packet.Header(identifier=1, tag=4, checksum=3890333039). Attempt 1: b'ndflkjvnsdfkjvnfsdkjlvnklsdfjnvdjklsfvnfjkdsvnsj\ndfvkjdk f'
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=3890333039). Attempt 2: b'ndflkjvnsdfkjvnfsdkjlvnklsdfjnvdjklsfvnfjkdsvnsj\ndfvkjdk f'
+Packet is lost
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=1, tag=4, checksum=3890333039). Attempt 3: b'ndflkjvnsdfkjvnfsdkjlvnklsdfjnvdjklsfvnfjkdsvnsj\ndfvkjdk f'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 0
+Sending data: b'vkjdn sfklndfkjv sdlfkjvnfdlnvdfksljn fldkpoehfq8y75yg0587'
+Try to send package Packet.Header(identifier=0, tag=4, checksum=77589878). Attempt 1: b'vkjdn sfklndfkjv sdlfkjvnfdlnvdfksljn fldkpoehfq8y75yg0587'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 1
+Sending data: b'y89pghqjkqe[rwij povjkdlnjvlavnfjkfvdl vdf\n\n\nMessage end!\n'
+Try to send package Packet.Header(identifier=1, tag=4, checksum=3990535086). Attempt 1: b'y89pghqjkqe[rwij povjkdlnjvlavnfjkfvdl vdf\n\n\nMessage end!\n'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 0
+Sending data: b'\n\n:)'
+Try to send package Packet.Header(identifier=0, tag=4, checksum=2049539581). Attempt 1: b'\n\n:)'
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=0, tag=4, checksum=2049539581). Attempt 2: b'\n\n:)'
+Packet is lost
+Try to receive ack
+Timeout
+Didn't receive any response
+Try to send package Packet.Header(identifier=0, tag=4, checksum=2049539581). Attempt 3: b'\n\n:)'
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 1
+Sending EOF
+Try to send package Packet.Header(identifier=1, tag=3, checksum=0). Attempt 1: b''
+Try to receive ack
+Ack received => Successfully sent
+Packet id flipped to 0
+Client: file sent
+Client: start receiving file back
+Start receiving file
+Try to receive packet with id 0. Attempt 1
+Received packet Packet.Header(identifier=0, tag=2, checksum=2072239142)
+Packet is correct
+Packet id flipped to 1
+Try to receive packet with id 1. Attempt 1
+Received packet Packet.Header(identifier=1, tag=4, checksum=1232746631)
+Packet is correct
+Packet id flipped to 0
+Try to receive packet with id 0. Attempt 1
+Received packet Packet.Header(identifier=0, tag=4, checksum=4261888814)
+Packet is correct
+Packet id flipped to 1
+Try to receive packet with id 1. Attempt 1
+Received packet Packet.Header(identifier=1, tag=4, checksum=818536713)
+Packet is correct
+Packet is lost
+Packet id flipped to 0
+Try to receive packet with id 0. Attempt 1
+Received packet Packet.Header(identifier=1, tag=4, checksum=818536713)
+Wrong identifier => Try one more time
+Try to receive packet with id 0. Attempt 2
+Timeout
+Failed to receive
+Try to receive packet with id 0. Attempt 3
+Received packet Packet.Header(identifier=0, tag=4, checksum=586908017)
+Packet is correct
+Packet is lost
+Packet id flipped to 1
+Try to receive packet with id 1. Attempt 1
+Received packet Packet.Header(identifier=0, tag=4, checksum=586908017)
+Packet is lost
+Wrong identifier => Try one more time
+Try to receive packet with id 1. Attempt 2
+Received packet Packet.Header(identifier=0, tag=4, checksum=586908017)
+Wrong identifier => Try one more time
+Try to receive packet with id 1. Attempt 3
+Timeout
+Failed to receive
+Try to receive packet with id 1. Attempt 4
+Received packet Packet.Header(identifier=1, tag=4, checksum=3890333039)
+Packet is correct
+Packet id flipped to 0
+Try to receive packet with id 0. Attempt 1
+Received packet Packet.Header(identifier=0, tag=4, checksum=77589878)
+Packet is correct
+Packet id flipped to 1
+Try to receive packet with id 1. Attempt 1
+Received packet Packet.Header(identifier=1, tag=4, checksum=3990535086)
+Packet is correct
+Packet id flipped to 0
+Try to receive packet with id 0. Attempt 1
+Received packet Packet.Header(identifier=0, tag=4, checksum=2049539581)
+Packet is correct
+Packet id flipped to 1
+Try to receive packet with id 1. Attempt 1
+Received packet Packet.Header(identifier=1, tag=3, checksum=0)
+Packet is correct
+Packet id flipped to 0
+EOF found, file received
+Finish receiving file
+Client: file received back
+
+Process finished with exit code 0
