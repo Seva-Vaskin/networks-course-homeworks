@@ -118,7 +118,35 @@ Windows) или UDP-сегмент (в случае с Unix).
 **на разных континентах**.
 
 #### Демонстрация работы
-todo
+``` 
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab10$ sudo python ping.py 23.185.0.3
+PING 23.185.0.3 64 bytes of data:
+Reply from 23.185.0.3: icmp_seq=0 time=35.38ms min=35.38ms, max=35.38ms, avg=35.38ms succ=100%
+Reply from 23.185.0.3: icmp_seq=1 time=34.12ms min=34.12ms, max=35.38ms, avg=34.75ms succ=100%
+Reply from 23.185.0.3: icmp_seq=2 time=33.64ms min=33.64ms, max=35.38ms, avg=34.38ms succ=100%
+Reply from 23.185.0.3: icmp_seq=3 time=33.77ms min=33.64ms, max=35.38ms, avg=34.23ms succ=100%
+Reply from 23.185.0.3: icmp_seq=4 time=33.56ms min=33.56ms, max=35.38ms, avg=34.09ms succ=100%
+Reply from 23.185.0.3: icmp_seq=5 time=33.67ms min=33.56ms, max=35.38ms, avg=34.02ms succ=100%
+Reply from 23.185.0.3: icmp_seq=6 time=33.69ms min=33.56ms, max=35.38ms, avg=33.97ms succ=100%
+Reply from 23.185.0.3: icmp_seq=7 time=33.61ms min=33.56ms, max=35.38ms, avg=33.93ms succ=100%
+Reply from 23.185.0.3: icmp_seq=8 time=33.67ms min=33.56ms, max=35.38ms, avg=33.90ms succ=100%
+Reply from 23.185.0.3: icmp_seq=9 time=33.51ms min=33.51ms, max=35.38ms, avg=33.86ms succ=100%
+
+
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab10$ sudo python ping.py ya.ru
+PING ya.ru 64 bytes of data:
+Reply from ya.ru: icmp_seq=0 time=96.71ms min=96.71ms, max=96.71ms, avg=96.71ms succ=100%
+Reply from ya.ru: icmp_seq=1 time=80.24ms min=80.24ms, max=96.71ms, avg=88.48ms succ=100%
+Reply from ya.ru: icmp_seq=2 time=80.36ms min=80.24ms, max=96.71ms, avg=85.77ms succ=100%
+Reply from ya.ru: icmp_seq=3 time=80.64ms min=80.24ms, max=96.71ms, avg=84.49ms succ=100%
+Reply from ya.ru: icmp_seq=4 time=82.41ms min=80.24ms, max=96.71ms, avg=84.07ms succ=100%
+Reply from ya.ru: icmp_seq=5 time=80.38ms min=80.24ms, max=96.71ms, avg=83.46ms succ=100%
+Reply from ya.ru: icmp_seq=6 time=82.59ms min=80.24ms, max=96.71ms, avg=83.33ms succ=100%
+Reply from ya.ru: icmp_seq=7 time=80.29ms min=80.24ms, max=96.71ms, avg=82.95ms succ=100%
+Reply from ya.ru: icmp_seq=8 time=80.29ms min=80.24ms, max=96.71ms, avg=82.66ms succ=100%
+Reply from ya.ru: icmp_seq=9 time=80.40ms min=80.24ms, max=96.71ms, avg=82.43ms succ=100%
+
+```
 
 ### Задание Б (1 балл)
 Организуйте вывод на консоль так, как это сделано в стандартной утилите ping: нужно вывести
@@ -126,7 +154,21 @@ todo
 Дополнительно вычислите коэффициент потери пакетов (в процентах).
 
 #### Демонстрация работы
-todo
+``` 
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab10$ sudo python ping.py www.nbu.edu.cn
+PING www.nbu.edu.cn 64 bytes of data:
+Reply from www.nbu.edu.cn: icmp_seq=0 time=445.80ms min=445.80ms, max=445.80ms, avg=445.80ms succ=100%
+Reply from www.nbu.edu.cn: icmp_seq=1 time=392.99ms min=392.99ms, max=445.80ms, avg=419.40ms succ=100%
+Reply from www.nbu.edu.cn: icmp_seq=2 time=393.61ms min=392.99ms, max=445.80ms, avg=410.80ms succ=100%
+Reply from www.nbu.edu.cn: icmp_seq=3 time=487.79ms min=392.99ms, max=487.79ms, avg=430.05ms succ=100%
+Reply from www.nbu.edu.cn: icmp_seq=4 time=409.37ms min=392.99ms, max=487.79ms, avg=425.91ms succ=100%
+Request timed out.
+Reply from www.nbu.edu.cn: icmp_seq=6 time=431.31ms min=392.99ms, max=487.79ms, avg=426.81ms succ=86%
+Reply from www.nbu.edu.cn: icmp_seq=7 time=393.02ms min=392.99ms, max=487.79ms, avg=421.98ms succ=88%
+Reply from www.nbu.edu.cn: icmp_seq=8 time=425.54ms min=392.99ms, max=487.79ms, avg=422.43ms succ=89%
+Reply from www.nbu.edu.cn: icmp_seq=9 time=393.02ms min=392.99ms, max=487.79ms, avg=419.16ms succ=90%
+
+```
 
 ### Задание В (1 балл)
 Ваша программа обрабатывает только тайм-ауты в получении ICMP-ответов. Добавьте к ней
