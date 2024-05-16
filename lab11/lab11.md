@@ -147,4 +147,5 @@ Received from server: TEST AGAIN 345
 приложения. Предоставьте скриншот работы приложения.
 
 #### Демонстрация работы
-todo
+
+![](images/draw.png)
