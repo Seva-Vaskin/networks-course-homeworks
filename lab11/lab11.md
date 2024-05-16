@@ -118,7 +118,27 @@ todo
 TCP с обязательным использованием протокола IPv6 на сетевом уровне.
 
 #### Демонстрация работы
-todo
+
+Server:
+
+``` 
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab11$ python echo_server.py 
+Server started and listening on ::1:8888
+Connected by ('::1', 39398, 0, 0)
+Connected by ('::1', 52334, 0, 0)
+```
+
+Client:
+
+``` 
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab11$ python echo_client.py 
+Enter a message to send to the server: test1234
+Received from server: TEST1234
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab11$ python echo_client.py 
+Enter a message to send to the server: test again 345
+Received from server: TEST AGAIN 345
+
+```
 
 ## Удаленное рисование (6 баллов)
 Программа удаленного рисования. На первом компьютере (клиент) пользователь может рисовать
