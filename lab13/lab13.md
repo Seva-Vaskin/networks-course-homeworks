@@ -105,7 +105,13 @@ Packet 5:
 его природы.
 
 #### Демонстрация работы
-todo
+
+```
+(venv) vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab13$ sudo ./venv/bin/python traffic_a.py wlp0s20f3
+^C
+Incoming traffic: 260544 bytes
+Outgoing traffic: 50342 bytes
+```
 
 ### Задание Б (2 балла)
 Разработать приложение, подсчитывающее входящий и исходящий сетевой трафик с учетом
@@ -113,7 +119,19 @@ todo
 формировать отчет с разделением трафика по портам назначения/отправки.
 
 #### Демонстрация работы
-todo
+``` 
+(venv) vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab13$ sudo ./venv/bin/python traffic_b.py wlp0s20f3
+^C
+Incoming traffic:
+Port 43892: 474 bytes
+Port 60043: 399 bytes
+Port 46808: 176 bytes
+Outgoing traffic:
+Port 60043: 2240 bytes
+Port 43892: 682 bytes
+Port 46808: 242 bytes
+
+```
 
 ### Задание В (4 балла)
 Разработать приложение, анализирующее весь сетевой трафик подсети. Приложение должно
