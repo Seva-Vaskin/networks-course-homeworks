@@ -63,6 +63,41 @@ Redundancy Check, CRC).
 выведите на экран: полезные передаваемые данные, пакет в закодированном виде, контрольный
 код.
 
+``` 
+vsevolod@lp-0734:~/spbu/networks-course-homeworks/lab13$ python crc.py "Test text! Hello world!"
+Packet 1:
+        Data: b'Test '
+        Encoded: b'Test !\xc3\xd3\x14'
+        CRC: 566481684
+        CRC Check: Passed
+
+Packet 2:
+        Data: b'text!'
+        Encoded: b'text!\x9bP#g'
+        CRC: 2605720423
+        CRC Check: Passed
+
+Packet 3:
+        Data: b' Hell'
+        Encoded: b' Hell\x9a\x13\xa8\xd8'
+        CRC: 2584979672
+        Made Error in Encoded: b' Hell\x9e\x13\xa8\xd8'
+        CRC Check: Failed
+
+Packet 4:
+        Data: b'o wor'
+        Encoded: b'o worp\xa2\xa1\x12'
+        CRC: 1889706258
+        CRC Check: Passed
+
+Packet 5:
+        Data: b'ld!'
+        Encoded: b'ld!\xf3tU\xab'
+        CRC: 4084487595
+        CRC Check: Passed
+
+```
+
 ### Подсчет сетевого трафика (8 баллов)
 
 ### Задание А (2 балла)
