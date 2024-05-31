@@ -180,7 +180,7 @@ smtplib.SMTPDataError: (554, b'5.7.1 Message rejected under suspicion of SPAM; h
 
 Заменил текст и тему сообщения. После этого smtp от яндекса отработал успешно, но Гугл всё равно отфлильтровал письмо в спам :)
 
-![](spam_message.png)
+![](img/spam_message.png)
 
 ## Задачи
 
